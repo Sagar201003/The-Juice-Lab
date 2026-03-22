@@ -6,7 +6,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12">
         <div className="space-y-4">
           <h3 className="text-3xl font-black bg-gradient-to-r from-orange-400 to-pink-500 bg-clip-text text-transparent">
-            Nano Banana
+            The Juice Lab
           </h3>
           <p className="text-gray-400 text-sm leading-relaxed">
             The future of freshness. 100% pure, natural ingredients crafted for your wellbeing.
@@ -45,7 +45,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="max-w-7xl mx-auto px-6 mt-16 pt-8 border-t border-gray-800 text-center text-gray-500 text-sm flex flex-col items-center justify-center space-y-2">
-        <span>© {new Date().getFullYear()} Nano Banana. All rights reserved.</span>
+        <span>© {new Date().getFullYear()} The Juice Lab. All rights reserved.</span>
         <span className="text-xs">Proudly crafted with Next.js and Framer Motion</span>
       </div>
     </footer>

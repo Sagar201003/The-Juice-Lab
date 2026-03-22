@@ -1,4 +1,4 @@
-# Nano Banana 🍌
+# The Juice Lab 🔬
 *The Future of Freshness.*
 
 A pristine, high-end "Scrollytelling" e-commerce website designed for a premium juice brand. Built as a single-page interactive experience using:
@@ -34,4 +34,4 @@ npm run build
 npx serve@latest out
 ```
 
-Enjoy exploring the world of Nano Banana fruit juices!
+Enjoy exploring the world of The Juice Lab fruit juices!

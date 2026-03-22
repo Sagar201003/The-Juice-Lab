@@ -25,7 +25,7 @@ export default function Navbar() {
             <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" fill="currentColor" fillOpacity="0.2"/>
           </svg>
           <span className="text-2xl font-black bg-gradient-to-r from-orange-400 to-pink-500 bg-clip-text text-transparent transform hover:scale-105 transition-transform">
-            Nano Banana
+            The Juice Lab
           </span>
         </div>
         
