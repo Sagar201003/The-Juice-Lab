@@ -92,7 +92,7 @@ export default function OrderPage() {
               
               <div className="flex items-center gap-6 mb-8 border-b border-white/10 pb-8">
                 <div className="w-24 h-24 rounded-2xl overflow-hidden relative bg-black">
-                   <img src={`${selectedProduct.folderPath}/60.jpg`} alt={selectedProduct.name} className="w-full h-full object-cover object-center mix-blend-screen scale-150 transform translate-y-4" />
+                   <img src={`${selectedProduct.folderPath}/1.jpg`} alt={selectedProduct.name} className="w-full h-full object-cover object-center mix-blend-screen" />
                 </div>
                 <div>
                    <h3 className="text-2xl font-black">{selectedProduct.name}</h3>
