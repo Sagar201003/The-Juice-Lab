@@ -45,7 +45,7 @@ export default function OrderPage() {
                 >
                   <div className="aspect-square rounded-2xl mb-4 overflow-hidden relative">
                     <div className="absolute inset-0 opacity-50 mix-blend-overlay transition-opacity duration-300 group-hover:opacity-100" style={{ background: p.gradient }}></div>
-                    <img src={`${p.folderPath}/1.jpg`} alt={p.name} className="w-full h-full object-cover mix-blend-screen" />
+                    <img src={`${p.folderPath}/bottle.png`} alt={p.name} className="w-full h-full object-cover" />
                   </div>
                   <h4 className="font-bold text-lg leading-tight">{p.name}</h4>
                   <p className="text-sm text-white/50">{p.price}</p>
@@ -92,7 +92,7 @@ export default function OrderPage() {
               
               <div className="flex items-center gap-6 mb-8 border-b border-white/10 pb-8">
                 <div className="w-24 h-24 rounded-2xl overflow-hidden relative bg-black">
-                   <img src={`${selectedProduct.folderPath}/1.jpg`} alt={selectedProduct.name} className="w-full h-full object-cover object-center mix-blend-screen" />
+                   <img src={`${selectedProduct.folderPath}/bottle.png`} alt={selectedProduct.name} className="w-full h-full object-cover object-center" />
                 </div>
                 <div>
                    <h3 className="text-2xl font-black">{selectedProduct.name}</h3>
