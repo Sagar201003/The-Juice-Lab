@@ -22,8 +22,8 @@ export interface Product {
         deliveryPromise: string;
         returnPolicy: string;
     };
- }
- export const products: Product[] = [
+}
+export const products: Product[] = [
     {
         id: "mango",
         name: "Cream Mango",
@@ -120,4 +120,4 @@ export interface Product {
             returnPolicy: "Damaged in transit? Instant replacement available."
         }
     }
- ];
+];

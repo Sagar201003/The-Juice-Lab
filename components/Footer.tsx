@@ -1,5 +1,7 @@
 "use client";
 
+import Link from "next/link";
+
 export default function Footer() {
   return (
     <footer className="bg-gray-900 text-white py-16 border-t border-white/10 z-10 relative">
@@ -16,20 +18,20 @@ export default function Footer() {
         <div>
           <h4 className="font-semibold mb-6 text-xl tracking-wide">Shop</h4>
           <ul className="space-y-3 text-gray-400 text-sm">
-            <li><a href="#" className="hover:text-orange-400 transition-colors">All Products</a></li>
-            <li><a href="#" className="hover:text-orange-400 transition-colors">Subscriptions</a></li>
-            <li><a href="#" className="hover:text-orange-400 transition-colors">Gift Cards</a></li>
-            <li><a href="#" className="hover:text-orange-400 transition-colors">Find a Store</a></li>
+            <li><Link href="/" className="hover:text-orange-400 transition-colors">All Products</Link></li>
+            <li><Link href="/order" className="hover:text-orange-400 transition-colors">Order & Subscriptions</Link></li>
+            <li><Link href="/about" className="hover:text-orange-400 transition-colors">Our Story</Link></li>
+            <li><Link href="/process" className="hover:text-orange-400 transition-colors">The Process</Link></li>
           </ul>
         </div>
 
         <div>
            <h4 className="font-semibold mb-6 text-xl tracking-wide">Support</h4>
           <ul className="space-y-3 text-gray-400 text-sm">
-            <li><a href="#" className="hover:text-orange-400 transition-colors">FAQ</a></li>
-            <li><a href="#" className="hover:text-orange-400 transition-colors">Shipping & Returns</a></li>
-            <li><a href="#" className="hover:text-orange-400 transition-colors">Contact Us</a></li>
-            <li><a href="#" className="hover:text-orange-400 transition-colors">Privacy Policy</a></li>
+            <li><Link href="#" className="hover:text-orange-400 transition-colors">FAQ</Link></li>
+            <li><Link href="#" className="hover:text-orange-400 transition-colors">Shipping & Returns</Link></li>
+            <li><Link href="#" className="hover:text-orange-400 transition-colors">Contact Us</Link></li>
+            <li><Link href="#" className="hover:text-orange-400 transition-colors">Privacy Policy</Link></li>
           </ul>
         </div>
 

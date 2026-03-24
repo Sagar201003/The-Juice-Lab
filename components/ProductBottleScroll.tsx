@@ -17,7 +17,7 @@ export default function ProductBottleScroll({ product }: ProductBottleScrollProp
     offset: ["start start", "end end"]
   });
 
-  const frameIndex = useTransform(scrollYProgress, [0, 1], [1, 120]);
+  const frameIndex = useTransform(scrollYProgress, [0, 1], [1, 240]);
 
   // Opacities and Y positions for 4 text blocks
   const op1 = useTransform(scrollYProgress, [0, 0.05, 0.15, 0.2], [1, 1, 0, 0]);
@@ -41,7 +41,7 @@ export default function ProductBottleScroll({ product }: ProductBottleScrollProp
     const images: HTMLImageElement[] = [];
 
     // Preload images
-    for (let i = 1; i <= 120; i++) {
+    for (let i = 1; i <= 240; i++) {
         const img = new Image();
         img.src = `${product.folderPath}/${i}.jpg`;
         images[i] = img;
@@ -100,13 +100,6 @@ export default function ProductBottleScroll({ product }: ProductBottleScrollProp
         <canvas 
           ref={canvasRef} 
           className="absolute inset-0 w-full h-full object-contain z-10 pointer-events-none transition-all duration-1000"
-          style={{
-            filter: product.id === "chocolate" 
-              ? "sepia(1) hue-rotate(-50deg) saturate(0.8) brightness(0.6)" 
-              : product.id === "pomegranate" 
-                ? "hue-rotate(320deg) saturate(1.5) brightness(0.8)" 
-                : "none"
-          }} 
         />
         
         {/* TEXT OVERLAYS - Included in the sticky container as specified */}

@@ -1,16 +1,18 @@
 # The Juice Lab 🔬
 *The Future of Freshness.*
 
-A pristine, high-end "Scrollytelling" e-commerce website designed for a premium juice brand. Built as a single-page interactive experience using:
+A pristine, high-end "Scrollytelling" e-commerce website designed for a premium juice brand. Built as a multi-route interactive experience using:
 - **Next.js 14+** (App Router)
 - **Tailwind CSS** (Styling & Utilities)
 - **Framer Motion** (Subtle layout transitions & scroll hooks)
-- **HTML5 Canvas** (Used for a flawless 120-frame image playback effect mapped perfectly to scroll physics).
+- **HTML5 Canvas** (Used for a flawless 240-frame image playback effect mapped perfectly to scroll physics).
 
 ## Features
-- **Scroll-Controlled Fluid Animations**: As the user scrolls downwards, 120 high-definition frames play dynamically to reveal the beautiful splash and swirling of fruit juice. 
+- **Scroll-Controlled Fluid Animations**: As the user scrolls downwards on the home page, 240 high-definition frames play dynamically to reveal the beautiful splash and swirling of fruit juice. 
 - **Flawless Sticky Engineering**: Bypassed CSS limitations to keep the animation sticky inside full-page transitioned motion containers.
-- **Dynamic CSS Filtering**: Switches hue-based CSS filters in real-time matching the juice flavors (Mango -> Bright Orange, Chocolate -> Velvety Brown, Pomegranate -> Ruby Red).
+- **Multiple Genuine Flavors**: 240 distinct image frames loaded contextually for Cream Mango, Dutch Chocolate, and Ruby Pomegranate flavours, offering a hyper-realistic experience without CSS filter hacks.
+- **Interactive Order Experience**: A stateful `/order` page featuring dynamic glassmorphic product selector cards, subscription toggles, and live cart mathematics.
+- **Engaging Brand Pages**: Dedicated `/about` (Our Story) and `/process` (The Process) routes detailing the High Pressure Processing (HPP) techniques with cinematic scale animations and scroll reveals.
 - **Fully Responsive**: Flawless interaction and legibility on mobile and desktop viewports.
 - **Production Ready STATIC EXPORT**: Next.js is explicitly configured to output a drop-ready static `export` folder with zero image unoptimization issues.
 
