@@ -34,6 +34,8 @@ export default function Navbar() {
           <div className="hidden md:flex items-center gap-6 text-sm font-medium text-white/80">
             <Link href="/about" className="hover:text-white transition-colors">Our Story</Link>
             <Link href="/process" className="hover:text-white transition-colors">The Process</Link>
+            <Link href="/developer" className="hover:text-white transition-colors">Developer</Link>
+            <Link href="/contact" className="hover:text-white transition-colors">Contact</Link>
           </div>
           <Link href="/order" className="px-6 py-2.5 rounded-full bg-white/10 hover:bg-white/20 text-white font-semibold backdrop-blur-md border border-white/20 transition-all shadow-[0_0_15px_rgba(255,165,0,0.3)] hover:shadow-[0_0_25px_rgba(255,165,0,0.6)]">
             Order Now

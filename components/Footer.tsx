@@ -22,6 +22,7 @@ export default function Footer() {
             <li><Link href="/order" className="hover:text-orange-400 transition-colors">Order & Subscriptions</Link></li>
             <li><Link href="/about" className="hover:text-orange-400 transition-colors">Our Story</Link></li>
             <li><Link href="/process" className="hover:text-orange-400 transition-colors">The Process</Link></li>
+            <li><Link href="/developer" className="hover:text-orange-400 transition-colors">Developer</Link></li>
           </ul>
         </div>
 
@@ -30,7 +31,7 @@ export default function Footer() {
           <ul className="space-y-3 text-gray-400 text-sm">
             <li><Link href="#" className="hover:text-orange-400 transition-colors">FAQ</Link></li>
             <li><Link href="#" className="hover:text-orange-400 transition-colors">Shipping & Returns</Link></li>
-            <li><Link href="#" className="hover:text-orange-400 transition-colors">Contact Us</Link></li>
+            <li><Link href="/contact" className="hover:text-orange-400 transition-colors">Contact Us</Link></li>
             <li><Link href="#" className="hover:text-orange-400 transition-colors">Privacy Policy</Link></li>
           </ul>
         </div>
