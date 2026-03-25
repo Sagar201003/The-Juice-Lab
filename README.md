@@ -1,6 +1,8 @@
 # The Juice Lab 🔬
 *The Future of Freshness.*
 
+**Live Deployment:** [https://the-juice-lab.vercel.app/](https://the-juice-lab.vercel.app/)
+
 A pristine, high-end "Scrollytelling" e-commerce website designed for a premium juice brand. Built as a multi-route interactive experience using:
 - **Next.js 14+** (App Router)
 - **Tailwind CSS** (Styling & Utilities)
