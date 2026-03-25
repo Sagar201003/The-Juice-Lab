@@ -5,11 +5,26 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { products } from "@/data/products";
 import { useState } from "react";
+import { useCart } from "@/context/CartContext";
+import Link from "next/link";
 
 export default function OrderPage() {
   const [selectedProduct, setSelectedProduct] = useState(products[0]);
   const [quantity, setQuantity] = useState(1);
   const [subscription, setSubscription] = useState(false);
+  const [addedToCart, setAddedToCart] = useState(false);
+  const { addToCart } = useCart();
+
+  const handleAddToCart = () => {
+    addToCart(selectedProduct, quantity, subscription);
+    setAddedToCart(true);
+    setTimeout(() => setAddedToCart(false), 2000);
+  };
+
+  const price = parseInt(selectedProduct.price.replace('₹', ''));
+  const subtotal = price * quantity;
+  const discountAmount = subscription ? Math.floor(subtotal * 0.15) : 0;
+  const total = subtotal - discountAmount;
 
   return (
     <main className="min-h-screen font-sans text-white bg-black">
@@ -104,32 +119,50 @@ export default function OrderPage() {
               <div className="space-y-4 text-lg mb-8">
                 <div className="flex justify-between">
                   <span className="text-white/60">Subtotal ({quantity} items)</span>
-                  <span>₹{parseInt(selectedProduct.price.replace('₹', '')) * quantity}</span>
+                  <span>₹{subtotal}</span>
                 </div>
                 {subscription && (
                   <div className="flex justify-between text-orange-400">
                     <span>Subscription Discount (15%)</span>
-                    <span>-₹{Math.floor(parseInt(selectedProduct.price.replace('₹', '')) * quantity * 0.15)}</span>
+                    <span>-₹{discountAmount}</span>
                   </div>
                 )}
                 <div className="flex justify-between">
                   <span className="text-white/60">Shipping</span>
-                  <span>Calculated at checkout</span>
+                  <span>{total >= 500 ? <span className="text-green-400">FREE</span> : '₹49'}</span>
                 </div>
                 
                 <div className="flex justify-between text-2xl font-bold pt-4 border-t border-white/10 mt-4">
                   <span>Total</span>
-                  <span>
-                    ₹{subscription 
-                      ? Math.floor(parseInt(selectedProduct.price.replace('₹', '')) * quantity * 0.85)
-                      : parseInt(selectedProduct.price.replace('₹', '')) * quantity}
-                  </span>
+                  <span>₹{total + (total >= 500 ? 0 : 49)}</span>
                 </div>
               </div>
 
-              <button className="w-full py-5 rounded-full font-bold text-xl bg-gradient-to-r from-orange-400 to-pink-500 text-white hover:opacity-90 transform hover:scale-[1.02] transition-all shadow-lg shadow-orange-500/25">
-                Proceed to Checkout
+              {/* Add to Cart Button */}
+              <button 
+                onClick={handleAddToCart}
+                className={`w-full py-5 rounded-full font-bold text-xl transition-all shadow-lg mb-4 ${
+                  addedToCart
+                    ? "bg-green-500 text-white shadow-green-500/25"
+                    : "bg-white text-black hover:opacity-90 transform hover:scale-[1.02] shadow-white/10"
+                }`}
+              >
+                {addedToCart ? "✓ Added to Cart!" : "Add to Cart"}
               </button>
+
+              {/* Proceed to Checkout */}
+              <Link href="/checkout">
+                <button 
+                  onClick={() => {
+                    if (!addedToCart) {
+                      addToCart(selectedProduct, quantity, subscription);
+                    }
+                  }}
+                  className="w-full py-5 rounded-full font-bold text-xl bg-gradient-to-r from-orange-400 to-pink-500 text-white hover:opacity-90 transform hover:scale-[1.02] transition-all shadow-lg shadow-orange-500/25"
+                >
+                  Proceed to Checkout
+                </button>
+              </Link>
 
               <p className="text-center text-sm text-white/40 mt-6 flex items-center justify-center gap-2">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>

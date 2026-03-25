@@ -6,9 +6,11 @@ import { products } from "@/data/products";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ProductBottleScroll from "@/components/ProductBottleScroll";
+import { useCart } from "@/context/CartContext";
 
 export default function Home() {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const { addToCart } = useCart();
 
   useEffect(() => {
     // Scroll to top on mount and flavor switch
@@ -128,6 +130,7 @@ export default function Home() {
 
                 <div className="flex justify-center">
                   <button 
+                    onClick={() => addToCart(product)}
                     className="group relative inline-flex items-center justify-center px-16 py-6 font-bold text-2xl text-black transition-all duration-300 bg-white rounded-full hover:scale-105 active:scale-95 overflow-hidden shadow-[0_0_40px_rgba(255,255,255,0.4)]"
                     style={{ color: product.themeColor }}
                   >
